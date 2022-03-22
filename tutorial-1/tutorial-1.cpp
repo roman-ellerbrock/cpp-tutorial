@@ -89,6 +89,35 @@ void ruleOfFive() {
 	A.ptr()[0] = 1;
 }
 
+int makeInt() {
+	return 10;
+}
+
+void writeInt(int& a) {
+	a = 10;
+}
+
+void printInt(const int& a) {
+	cout << a << endl;
+}
+
+void lrValues() {
+	// a is l-value, 10 is r-value
+	int a = 10;
+	a = makeInt();
+	// cannot assign to a r-value
+//	10 = a;
+	// l-value can be r-value
+	int b = a;
+	// references require l-values
+	writeInt(a);
+//	writeInt(10);
+	// c++ provides workaround for const reference
+	printInt(a);
+	printInt(10);
+
+}
+
 void liveDemo() {
 
 }
