@@ -3,7 +3,7 @@
 Goal of this tutorial is to teach fundamental concepts about C++ that enable writing fast,
 readable, and maintainable code.
 
-## Tutorials
+## Compiling the code
 Clone this repository to your computer using:
 ```
 git@github.com:roman-ellerbrock/cpp-tutorial.git
@@ -24,7 +24,7 @@ make
 ```
 Now you should have binaries for the lecture code and the tutorials.
 
-Start working on the tutorials
+## Tutorials
 
    [Tutorial 1 - A simple Matrix class](./tutorial-1/tutorial-1.md)
 

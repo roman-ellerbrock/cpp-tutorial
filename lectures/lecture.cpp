@@ -119,7 +119,6 @@ void lrValues() {
 }
 
 void liveDemo() {
-
 }
 
 void runLectureCode() {

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "lectures/lecture.h"
+#include "lecture.h"
 
 int main() {
 	runLectureCode();

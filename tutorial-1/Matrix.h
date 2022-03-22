@@ -5,9 +5,11 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 #include "cMatrix.h"
+#include <iostream>
+#include <cstring>
+#include <utility>
 
 class Matrix {
 };
-
 
 #endif //MATRIX_H

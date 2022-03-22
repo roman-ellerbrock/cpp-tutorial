@@ -59,11 +59,11 @@ public:
 	}
 
 	inline double operator()(size_t r, size_t c) const {
-		return ptr_[r * ncol_ + c];
+		return ptr_[c * nrow_ + r];
 	}
 
 	inline double& operator()(size_t r, size_t c) {
-		return ptr_[r * ncol_ + c];
+		return ptr_[c * nrow_ + r];
 	}
 
 	int nrow_;
