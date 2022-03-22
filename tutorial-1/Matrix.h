@@ -5,6 +5,7 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 #include <cstring>
+#include <utility>
 #include "cMatrix.h"
 
 class Matrix {
@@ -26,12 +27,25 @@ public:
 		} else if (A.nrow_ == nrow_ && A.ncol_ == ncol_) {
 			memcpy(ptr_, A.ptr_, nrow_ * ncol_ * sizeof(double));
 		} else {
-			free(ptr_);
-			nrow_ = A.nrow_;
-			ncol_ = A.ncol_;
-			ptr_ = (double *) malloc(nrow_ * ncol_ * sizeof(double));
-			memcpy(ptr_, A.ptr_, nrow_ * ncol_ * sizeof(double));
+			*this = Matrix(A);
 		}
+		return *this;
+	}
+
+	Matrix(Matrix&& A) noexcept
+	: nrow_(A.nrow_), ncol_(A.ncol_), ptr_(A.ptr_) {
+		A.ptr_ = nullptr;
+	}
+
+	Matrix& operator=(Matrix&& A) noexcept {
+		if (this == &A) {
+			return *this;
+		}
+		delete[] ptr_;
+		ncol_ = A.ncol_;
+		nrow_ = A.nrow_;
+		ptr_ = A.ptr_;
+		A.ptr_ = nullptr;
 		return *this;
 	}
 
@@ -42,6 +56,14 @@ public:
 
 	~Matrix() {
 		free(ptr_);
+	}
+
+	inline double operator()(size_t r, size_t c) const {
+		return ptr_[r * ncol_ + c];
+	}
+
+	inline double& operator()(size_t r, size_t c) {
+		return ptr_[r * ncol_ + c];
 	}
 
 	int nrow_;

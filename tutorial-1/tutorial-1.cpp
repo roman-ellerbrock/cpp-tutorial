@@ -58,13 +58,44 @@ void ruleOfThree() {
 	/// 3.) Copy assignment operator
 	Matrix D = A;
 
-
-	cout << D << endl;
 	C.ptr()[0] = 1;
 	D.ptr()[0] = 1;
+}
+
+Matrix generator() {
+	Matrix m(10, 10);
+	for (size_t r = 0; r < m.nrow_; ++r) {
+		for (size_t c = 0; c < m.ncol_; ++c) {
+			m(r, c) = (double) (r * c);
+		}
+	}
+	return m;
+}
+
+void ruleOfFive() {
+	Matrix A(10, 10);
+
+	/// Constructs C from temporary object
+	Matrix C(generator());
+
+	/// Creates B from temporary object via operator=
+	Matrix B = generator();
+
+	/// Writes on existing object from temporary
+	A = generator();
+
+	C.ptr()[0] = 1;
+	B.ptr()[0] = 1;
+	A.ptr()[0] = 1;
+}
+
+void liveDemo() {
+
 }
 
 void runTutorial1() {
 	matrixCPPDemo();
 	ruleOfThree();
+	ruleOfFive();
+	liveDemo();
 }
