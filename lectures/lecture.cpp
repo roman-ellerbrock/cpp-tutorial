@@ -2,7 +2,7 @@
 // Created by Roman Ellerbrock on 12/9/21.
 //
 
-#include "tutorial-1.h"
+#include "lecture.h"
 #include <cstdlib>
 #include "cMatrix.h"
 #include <iostream>
@@ -122,7 +122,7 @@ void liveDemo() {
 
 }
 
-void runTutorial1() {
+void runLectureCode() {
 	matrixCPPDemo();
 	ruleOfThree();
 	ruleOfFive();

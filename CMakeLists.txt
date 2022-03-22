@@ -3,12 +3,10 @@ project(CPP_tutorial)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPP_tutorial
-
-        tutorial-1/cMatrix.cpp
-        tutorial-1/Matrix.cpp
-        tutorial-1/tutorial-1.cpp
-
-
-
+add_executable(CPP_lecture
+        lectures/cMatrix.cpp
+        lectures/Matrix.cpp
+        lectures/lecture.cpp
         main.cpp)
+
+add_subdirectory(tutorial-1)

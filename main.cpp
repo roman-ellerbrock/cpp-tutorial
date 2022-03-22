@@ -1,7 +1,7 @@
 #include <iostream>
-#include "tutorial-1/backup/tutorial-1.h"
+#include "lectures/lecture.h"
 
 int main() {
-	runTutorial1();
+	runLectureCode();
 	return 0;
 }
