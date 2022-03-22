@@ -76,3 +76,15 @@ Run the following code and count the number of allocations, deallocationos and m
 Now implement a move assignment operator and move constructor
 and count again. Note that move semantics can help to write
 simple, yet efficient copy constructors.
+
+The matrix class now obeys the rule of five. Remember that implementing
+the rule of five is only required if the class manually manages it's 
+own memory.
+This is one of the main reasons why only a few (ideally a single) base-classes
+should manage memory directly. High-level routines can use classes like 
+std::vector or rely on other library classes as wrappers for the pointers.
+
+How would the Matrix class look like if it was built based on std::vector?
+In which ways can Matrix be based on std::vector in C++? What are advantages
+and disadvantes associated with the different implementations and with using
+std::vector in general?
