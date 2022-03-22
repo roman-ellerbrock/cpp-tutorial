@@ -8,7 +8,14 @@ Clone this repository to your computer using:
 ```
 git@github.com:roman-ellerbrock/cpp-tutorial.git
 ```
-Now build the repository using CMake
+The tutorial only requires CMake >=2.8 and GCC (tested on 9.3.0).
+If you're running the tutorial on Martinez' groups server Fire, 
+you can load the dependencies via
+```
+module load GCC/9.3.0
+```
+
+Build the repository using CMake
 ```
 mkdir build
 cd build
