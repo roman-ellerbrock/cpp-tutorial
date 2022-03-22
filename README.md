@@ -6,8 +6,19 @@ readable, and maintainable code.
 ## Tutorials
 Clone this repository to your computer using:
 ```
-git clone 
+git@github.com:roman-ellerbrock/cpp-tutorial.git
 ```
+Now build the repository using CMake
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+Now you should have binaries for the lecture code and the tutorials.
 
+Start working on the tutorials
+
+   [Tutorial 1 - A simple Matrix class](./tutorial-1/tutorial-1.md)
 
 
